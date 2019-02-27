@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: circleci/ruby:2.6-rc
     steps:
+      - run: docker system df
       - run: mkdir -p workspace
       - run: echo "Testing Workspaces" > workspace/echo-output
       - persist_to_workspace:
